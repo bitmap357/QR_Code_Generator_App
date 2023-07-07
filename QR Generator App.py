@@ -17,5 +17,7 @@ def generate():
     canvas.create_window(200, 450, window=image_label)
 
 
+canvas = Canvas(root, width=400, height=600)
+canvas.pack()
 
 root.mainloop()
