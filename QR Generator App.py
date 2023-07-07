@@ -33,5 +33,7 @@ link_entry = Entry(root)
 canvas.create_window(200, 130, window=name_entry)
 canvas.create_window(200, 180, window=link_entry)
 
+button = Button(root, text="Generate QR Code", command=generate)
+canvas.create_window(200, 230, window=button)
 
 root.mainloop()
