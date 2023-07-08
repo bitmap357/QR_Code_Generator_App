@@ -6,6 +6,7 @@ root = Tk()
 
 
 def generate():
+    canvas.delete("qr_code")
     link_name = name_entry.get()
     link = link_entry.get()
     file_name = link_name + ".png"
@@ -14,7 +15,7 @@ def generate():
     image = ImageTk.PhotoImage(Image.open(file_name))
     image_label = Label(image=image)
     image_label.image = image
-    canvas.create_window(200, 450, window=image_label)
+    canvas.create_window(200, 450, window=image_label, tags="qr_code")
 
 
 canvas = Canvas(root, width=400, height=600)
